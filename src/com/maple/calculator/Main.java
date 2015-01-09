@@ -4,6 +4,7 @@ public class Main {
 	public static void main(String[] args) { 
 		
 		String sign;
+		Calculator calculator = new Calculator();
  
 		float total = 0;
 		System.out.print("두 수를 입력하세요:");
@@ -14,19 +15,19 @@ public class Main {
 		sign = stdin.next();
 		
 		if(sign.equals("+")) {
-			total=Calculator.add(a,b);
+			total=calculator.add(a,b);
 		}
 		
 		else if(sign.equals("-")) {
-			total=Calculator.sub(a,b);
+			total=calculator.sub(a,b);
 		}
 		
 		else if(sign.equals("+")) {
-			total=Calculator.mul(a,b);
+			total=calculator.mul(a,b);
 		}
 		
 		else if(sign.equals("+")) {
-			total=Calculator.div(a,b);
+			total=calculator.div(a,b);
 		}
 		
 		else {
@@ -37,9 +38,8 @@ public class Main {
 		
 		System.out.print("16진수로 변환할 10진수를 입력하세요:");
 		int c = stdin.nextInt();
-		Calculator.hexa(c);
+		calculator.hexadecimal_change(c);
 	}
-	
 }
 
 		
